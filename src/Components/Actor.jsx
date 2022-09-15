@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
 import { Box } from "@chakra-ui/react";
+
+import Card from "./Card";
 import EmptyView from "./EmptyView";
 
 function Actor({ searchKey }) {
@@ -33,7 +34,6 @@ function Actor({ searchKey }) {
         <Box
           display="flex"
           flexWrap="wrap"
-          maxW="1400px"
           gap={12}
           justifyContent="center"
           marginX={{ base: 0, md: 62, lg: 112, xl: 144 }}

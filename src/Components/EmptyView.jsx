@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
 function EmptyView({ emptyMessage }) {
   return (
@@ -9,9 +9,8 @@ function EmptyView({ emptyMessage }) {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      flexDir="row"
     >
-      {emptyMessage}
+      <Text fontSize="2xl">{emptyMessage}</Text>
     </Box>
   );
 }

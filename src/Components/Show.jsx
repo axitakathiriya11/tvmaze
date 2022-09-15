@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
 import { Box } from "@chakra-ui/react";
+
+import Card from "./Card";
 import EmptyView from "./EmptyView";
 
 function Show({ searchKey }) {
@@ -49,6 +50,7 @@ function Show({ searchKey }) {
                   : "https://awu.ac.in/assets/img/posters/default_poster.png"
               }
               href={item.show.url}
+              rating={item.show.rating.average}
             />
           ))}
         </Box>

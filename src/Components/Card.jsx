@@ -1,6 +1,7 @@
 import { Box, Image, Text } from "@chakra-ui/react";
+import { StarIcon } from "@chakra-ui/icons";
 
-const Card = ({ title, imageURL, href }) => {
+function Card({ title, imageURL, href, rating }) {
   return (
     <Box
       display="flex"
@@ -9,7 +10,6 @@ const Card = ({ title, imageURL, href }) => {
       _hover={{
         transform: "scale(1.1)",
         transition: "all 300ms ease-in",
-        zIndex: 2,
         cursor: "pointer",
       }}
       maxW={{ base: 200, md: 180, lg: 200, xl: 200 }}
@@ -24,11 +24,17 @@ const Card = ({ title, imageURL, href }) => {
         />
       </a>
 
-      <Box>
+      <Box
+        display="flex"
+        flexDir="row"
+        gap={1}
+        alignItems="center"
+        justifyContent="center"
+      >
         <Text>{title}</Text>
       </Box>
     </Box>
   );
-};
+}
 
 export default Card;
