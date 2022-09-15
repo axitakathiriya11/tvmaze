@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 
-function EmptyView({emptyMessage}) {
+function EmptyView({ emptyMessage }) {
   return (
     <Box
       h="85vh"

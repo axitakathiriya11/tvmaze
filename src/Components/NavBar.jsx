@@ -18,7 +18,7 @@ function NavBar({
   toggleColorMode,
   toggleSearchType,
   handleSearchEvent,
-  searchKey
+  searchKey,
 }) {
   return (
     <Box
