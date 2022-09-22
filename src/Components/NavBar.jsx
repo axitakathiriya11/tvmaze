@@ -39,7 +39,7 @@ function NavBar({
         gap={{ base: 8, md: 8, lg: 12, xl: 12 }}
         alignItems="center"
       >
-        <Link _hover={{ border: "" }}>
+        <Link>
           <Text fontSize={{ base: "md", md: "md", lg: "xl", xl: "2xl" }}>
             TVmaze
           </Text>

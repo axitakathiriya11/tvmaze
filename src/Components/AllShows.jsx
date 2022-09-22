@@ -4,13 +4,10 @@ import { Box } from "@chakra-ui/react";
 import Card from "./Card";
 import EmptyView from "./EmptyView";
 
-function Show({ searchKey }) {
+function AllShows() {
   const [data, setData] = useState([]);
 
   let api_url = "https://api.tvmaze.com/shows?page=1";
-  if (searchKey.length > 0) {
-    api_url = `https://api.tvmaze.com/search/shows?q=${searchKey}`;
-  }
 
   const getShowsData = async () => {
     try {
@@ -23,10 +20,8 @@ function Show({ searchKey }) {
   };
 
   useEffect(() => {
-    if (searchKey.length > 0) {
-      getShowsData();
-    }
-  }, [searchKey]);
+    getShowsData();
+  });
 
   return (
     <>
@@ -43,16 +38,16 @@ function Show({ searchKey }) {
           {data.map((item, index) => (
             <Card
               key={index}
-              title={item.show.name}
+              title={item.name}
               imageURL={
-                item.show.image
-                  ? item.show.image.medium
+                item.image
+                  ? item.image.medium
                   : "https://awu.ac.in/assets/img/posters/default_poster.png"
               }
-              href={item.show.url}
-              rating={item.show.rating.average}
-              language={item.show.language}
-              desc={item.show.summary}
+              href={item.url}
+              rating={item.rating.average}
+              language={item.language}
+              desc={item.summary}
             />
           ))}
         </Box>
@@ -63,4 +58,4 @@ function Show({ searchKey }) {
   );
 }
 
-export default Show;
+export default AllShows;

@@ -6,7 +6,7 @@ import { useColorMode } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
 import Actor from "./Components/Actor";
 import Show from "./Components/Show";
-import EmptyView from "./Components/EmptyView";
+import AllShows from "./Components/AllShows";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -41,7 +41,7 @@ function App() {
           <Show searchKey={searchKey} />
         )
       ) : (
-        <EmptyView emptyMessage={"List is Empty!"} />
+        <AllShows />
       )}
     </>
   );
