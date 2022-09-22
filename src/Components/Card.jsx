@@ -26,10 +26,14 @@ function Card({ title, imageURL, href, rating, language, desc }) {
       <Text fontSize="18px" fontWeight="700" noOfLines={[1]}>
         {title}
       </Text>
-      <Box>
-        <StarIcon color="yellow" w={4} h={4} marginBottom="1" marginEnd="1" />
-        {rating ? rating : "NA"}
-      </Box>
+
+      {rating && (
+        <Box>
+          <StarIcon color="yellow" w={4} h={4} marginBottom="1" marginEnd="1" />
+          {rating}
+        </Box>
+      )}
+
       <Text
         fontSize="13px"
         dangerouslySetInnerHTML={{ __html: desc }}

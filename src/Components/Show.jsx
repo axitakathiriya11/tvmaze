@@ -23,9 +23,7 @@ function Show({ searchKey }) {
   };
 
   useEffect(() => {
-    if (searchKey.length > 0) {
-      getShowsData();
-    }
+    getShowsData();
   }, [searchKey]);
 
   return (

@@ -23,9 +23,7 @@ function Actor({ searchKey }) {
   };
 
   useEffect(() => {
-    if (searchKey.length > 0) {
-      getActorsData();
-    }
+    getActorsData();
   }, [searchKey]);
 
   return (
